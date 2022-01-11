@@ -6,6 +6,6 @@ import "hardhat/console.sol";
 
 contract MyEpicGame {
   constructor() {
-    console.log("THIS IS MY GAME CONTRACT. NICE."); 
+    console.log("LET THE EPIC GAMES BEGIN!"); 
   }
 }
