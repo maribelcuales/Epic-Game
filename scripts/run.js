@@ -1,5 +1,6 @@
 const main = async () => {
   // compile our contract and generate files needed under the artifacts directory
+  // hre stands for Hardhat Runtime Environment which contains all of the functionality of Hardhat 
   const gameContractFactory = await hre.ethers.gameContractFactory('MyEpicGame');
   
   // hardhat creates a local Ethereum network then destroys it after completely running the script
