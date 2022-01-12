@@ -30,6 +30,20 @@ contract MyEpicGame {
     uint[] memory characterAttackDmg
   ) 
   {
-    console.log("LET THE EPIC GAMES BEGIN!"); 
+    // Loop through all the characters and save their values to the contract 
+    // Data will be used later when the NFTs are minted 
+    for (uint i = 0; i < characterNames.length; i += 1) {
+      defaultCharacters.push(CharacterAttributes({
+        characterIndex: i,
+        name: characterNames[i],
+        imageURI: characterImageURIs[i],
+        hp: characterHp[i],
+        maxHp: characterHp[i],
+        attackDamage: characterAttackDmg[i]
+      }));
+
+      CharacterAttributes memory c = defaultCharacters[i];
+      console.log("Done initializing %s w/ HP %s, img %s", c.name, c.hp, c.imageURI);
+    }
   }
 }
