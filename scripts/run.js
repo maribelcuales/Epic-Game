@@ -1,12 +1,12 @@
 const main = async () => {
   const gameContractFactory = await hre.ethers.getContractFactory('MyEpicGame');
   const gameContract = await gameContractFactory.deploy(
-    ["Leo", "Aang", "Pikachu"],   // Names 
-    ["https://i.imgur.com/pKd5Sdk.png", // Images
-    "https://i.imgur.com/xVu4vFL.png", 
-    "https://i.imgur.com/WMB6g9u.png"],
-    [100, 200, 300],  // HP values 
-    [100, 50, 25]     // Attack damage values 
+    ["Inuyasha", "Sesshomaru", "Naraku"],   // Names 
+    ["https://static.wikia.nocookie.net/inuyasha/images/b/b5/Inuyasha.png/revision/latest?cb=20151128185518", // Images
+    "https://pbs.twimg.com/profile_images/1323023465826406404/tIEi3gy9_400x400.jpg", 
+    "https://i.ytimg.com/vi/G2m-DEUeeYY/sddefault.jpg"],
+    [300, 200, 100],  // HP values 
+    [50, 50, 100]     // Attack damage values 
   );
   await gameContract.deployed();
   console.log("Contract deployed to:", gameContract.address);
